@@ -1,0 +1,258 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+				color: red;
+				font-weight: bold;
+		}
+		.priority-2 {
+				color: orange;
+				font-weight: bold;
+		}
+		.priority-3 {
+				color: green;
+				font-weight: bold;
+		}
+		.priority-4 {
+				color: blue;
+				font-weight: bold;
+		}
+		</style>
+      <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+   </head>
+   <body>
+      <h1>
+         <a href="https://spotbugs.github.io/">SpotBugs</a> Report</h1>
+      <h2>Project Information</h2>
+      <p>Project: 
+		</p>
+      <p>SpotBugs version: 4.7.3</p>
+      <p>Code analyzed:</p>
+      <ul>
+         <li>D:/Workspace/Training/Activite1EngLog/src/first/exercice/Produit.class</li>
+      </ul>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Metrics</h2>
+      <p>23 lines of code analyzed,
+	in 1 classes, 
+	in 1 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">1</td>
+            <td align="right">43.48</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">3</td>
+            <td align="right">130.43</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>4</b>
+            </td>
+            <td align="right">
+               <b>173.91</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Contents</h2>
+      <ul>
+         <li>
+            <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+         </li>
+         <li>
+            <a href="#Details">Details</a>
+         </li>
+      </ul>
+      <h1>Summary</h1>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">4</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>4</b>
+            </td>
+         </tr>
+      </table>
+      <h1>Warnings</h1>
+      <p>Click on a warning row to see full context information.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e4');">
+            <td>
+               <span class="priority-2">BC</span>
+            </td>
+            <td>Equals method for first.exercice.Produit assumes the argument is of type Produit</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e4" style="display: none;">
+                  <a href="#BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">Bug type BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS (click for details)</a>
+                  <br/>In class first.exercice.Produit<br/>In method first.exercice.Produit.equals(Object)<br/>At Produit.java:[line 49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e16');">
+            <td>
+               <span class="priority-2">ES</span>
+            </td>
+            <td>Comparaison d'objets String utilisant == ou != dans first.exercice.Produit.equals(Object)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e16" style="display: none;">
+                  <a href="#ES_COMPARING_STRINGS_WITH_EQ">Bug type ES_COMPARING_STRINGS_WITH_EQ (click for details)</a>
+                  <br/>In class first.exercice.Produit<br/>In method first.exercice.Produit.equals(Object)<br/>Actual type String<br/>Value loaded from field first.exercice.Produit.reference<br/>At Produit.java:[line 49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e36');">
+            <td>
+               <span class="priority-1">HE</span>
+            </td>
+            <td>first.exercice.Produit définit equals() et utilise Object.hashCode()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e36" style="display: none;">
+                  <a href="#HE_EQUALS_USE_HASHCODE">Bug type HE_EQUALS_USE_HASHCODE (click for details)</a>
+                  <br/>In class first.exercice.Produit<br/>In method first.exercice.Produit.equals(Object)<br/>At Produit.java:[line 49]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e48');">
+            <td>
+               <span class="priority-2">NP</span>
+            </td>
+            <td>first.exercice.Produit.equals(Object) ne vérifie pas la nullité d'un paramètre</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e48" style="display: none;">
+                  <a href="#NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT">Bug type NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT (click for details)</a>
+                  <br/>In class first.exercice.Produit<br/>In method first.exercice.Produit.equals(Object)<br/>Parameter $L1<br/>At Produit.java:[line 49]</p>
+            </td>
+         </tr>
+      </table>
+      <h1>
+         <a name="Details">Details</a>
+      </h1>
+      <h2>
+         <a name="BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS">BC_EQUALS_METHOD_SHOULD_WORK_FOR_ALL_OBJECTS: Equals method should not assume anything about the type of its argument</a>
+      </h2>
+
+<p>
+The <code>equals(Object o)</code> method shouldn't make any assumptions
+about the type of <code>o</code>. It should simply return
+false if <code>o</code> is not the same type as <code>this</code>.
+</p>
+
+    <h2>
+         <a name="ES_COMPARING_STRINGS_WITH_EQ">ES_COMPARING_STRINGS_WITH_EQ: Comparaison d'objets String utilisant == ou !=</a>
+      </h2>
+
+<p>Ce code compare des objets <code>java.lang.String</code> au moyen de l'égalité par référence des opérateurs <code>==</code> ou <code>!=</code>. A moins que les deux chaînes ne soient des constantes dans le fichier source ou aient été internalisées au moyen de la méthode <code>String.intern()</code>, deux chaînes identiques peuvent être représentées par deux objets <code>String</code> différents. Envisagez d'utiliser la méthode <code>equals(Object)</code> à la place.</p>
+
+  <h2>
+         <a name="HE_EQUALS_USE_HASHCODE">HE_EQUALS_USE_HASHCODE: La classe définit equals() et utilise Object.hashCode()</a>
+      </h2>
+
+<p>Cette classe surcharge <code>equals(Object)</code>, pas <code>hashCode()</code>, et hérite de l'implémentation de <code>hashCode()</code> issue de <code>java.lang.Object</code> (qui renvoie le code de hachage d'identité, une valeur arbitraire assignée à l'objet par la JVM). C'est pourquoi la classe a des chances de violer le contrat impliquant que des objets égaux doivent avoir des codes de hachage identiques.</p>
+<p>Si vous ne pensez pas que des instances de cette classe soient un jour insérés dans des<code>HashMap</code>/<code>Hashtable</code>, l'implémentation recommendée est du type :</p>
+<pre><code>
+public int hashCode() {
+  assert false : "hashCode not designed";
+  return 42; // any arbitrary constant will do 
+}
+</code></pre>
+
+  <h2>
+         <a name="NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT">NP_EQUALS_SHOULD_HANDLE_NULL_ARGUMENT: Méthode equals() ne vérifiant pas la nullité</a>
+      </h2>
+
+<p>Cette implémentation de <code>equals(Object)</code> ne respecte pas le contrat défini par <code>java.lang.Object.equals()</code> car elle ne vérifie la nullité du paramètre reçu en argument. Toutes les méthodes <code>equals()</code> doivent renvoyer <code>false</code> quand elles reçoivent une valeur à <code>null</code>.</p>
+
+  </body>
+</html>
