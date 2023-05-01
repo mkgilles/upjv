@@ -1,0 +1,202 @@
+
+
+
+<!DOCTYPE html>
+<html id="htmlId">
+<head>
+  <title>Coverage Report > TabAlgos</title>
+  <style type="text/css">
+    @import "../../css/coverage.css";
+    @import "../../css/idea.min.css";
+  </style>
+  <script type="text/javascript" src="../../js/highlight.min.js"></script>
+  <script type="text/javascript" src="../../js/highlightjs-line-numbers.min.js"></script>
+</head>
+
+<body>
+<div class="content">
+<div class="breadCrumbs">
+Current scope:     <a href="../../index.html">all classes</a>
+    <span class="separator">|</span>
+    <a href="../index.html">second.exercice</a>
+</div>
+
+<h1>Coverage Summary for Class: TabAlgos (second.exercice)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">TabAlgos</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/31)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<pre>
+<code class="sourceCode" id="sourceCode">&nbsp;package second.exercice;
+&nbsp;
+&nbsp;
+&nbsp;/***
+&nbsp;  * Classe utilitaire de tableau d&#39;entiers.
+&nbsp; * @author  Gilles MAMBIDI
+&nbsp; */
+&nbsp;
+&nbsp;public final class TabAlgos {
+&nbsp;    /**
+&nbsp;     * Constante, valeur maximale d&#39;un tableau.
+&nbsp;     * */
+&nbsp;    private static final int MAX_VALUE = 256;
+&nbsp;/**
+&nbsp; * Constructeur par defaut sans incidence sur le projet.
+&nbsp; * */
+&nbsp;    private    TabAlgos() {
+&nbsp;        // Just pour eviter son instanciation.
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * Renvoie la plus grande valeur d&#39;un tableau d&#39;entiers.
+&nbsp;     *
+&nbsp;     * @param tab le tableau d&#39;entiers à rechercher
+&nbsp;     * @return la plus grande valeur du tableau
+&nbsp;     */
+&nbsp;    public static int plusGrand(final int[] tab) {
+<b class="nc">&nbsp;        int max = tab[0];</b>
+<b class="nc">&nbsp;        for (int i = 1; i &lt; tab.length; i++) {</b>
+<b class="nc">&nbsp;            if (tab[i] &gt; max) {</b>
+<b class="nc">&nbsp;                max = tab[i];</b>
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;        return max;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /**
+&nbsp;     * @param tab le tableau d&#39;entiers à rechercher.
+&nbsp;     * @return moyenne des valeurs du tableau.
+&nbsp;     * @throws  IllegalArgumentException si tab et null ou vide.
+&nbsp;     **/
+&nbsp;    public static double moyenne(final int[] tab) {
+<b class="nc">&nbsp;        if (tab == null || tab.length == 0) {</b>
+<b class="nc">&nbsp;            throw new IllegalArgumentException(&quot;Le tableau ne doit&quot;</b>
+&nbsp;                    + &quot; pas être null ou vide.&quot;);
+&nbsp;        }
+<b class="nc">&nbsp;        double sum = 0;</b>
+<b class="nc">&nbsp;        for (final int value : tab) {</b>
+<b class="nc">&nbsp;            sum += value;</b>
+&nbsp;        }
+<b class="nc">&nbsp;        return sum / tab.length;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /** Compare le contenu de 2 tableaux en tenant compte de l&#39;ordre.
+&nbsp;     * @param tab1 fait reference au premier tableau à comparer
+&nbsp;     * @param tab2 fait reference au deuxieme tableau à comparer
+&nbsp;     * @return true si les 2 tableaux ont les mêmes éléments
+&nbsp;     * et les mêmes nombres d&#39;occurences(avec les elements dans le meme ordre).
+&nbsp;     **/
+&nbsp;    public static boolean egaux(final int[] tab1, final int[] tab2) {
+<b class="nc">&nbsp;        boolean res = true;</b>
+<b class="nc">&nbsp;        if (tab1 == null || tab2 == null || tab1.length != tab2.length) {</b>
+<b class="nc">&nbsp;            res = false;</b>
+&nbsp;        }
+<b class="nc">&nbsp;        for (int i = 0; i &lt; tab1.length; i++) {</b>
+<b class="nc">&nbsp;            if (tab1[i] != tab2[i]) {</b>
+<b class="nc">&nbsp;                res = false;</b>
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;        return res;</b>
+&nbsp;    }
+&nbsp;
+&nbsp;    /** Compare le contenu de 2 tableaux sans tenir compte de l&#39;ordre.
+&nbsp;     * @param tab1 fait reference au premier tableau à comparer
+&nbsp;     * @param tab2 fait reference au deuxieme tableau à comparer
+&nbsp;     * @return true si les 2 tableaux contiennent les mêmes éléments
+&nbsp;     * avec les mêmes nombres d&#39;occurrence (pas forcément dans le meme ordre).
+&nbsp;     **/
+&nbsp;    public static boolean similaires(final int[] tab1, final int[] tab2) {
+<b class="nc">&nbsp;        boolean result = true;</b>
+<b class="nc">&nbsp;        if (tab1 == null || tab2 == null || tab1.length != tab2.length) {</b>
+<b class="nc">&nbsp;            result = false;</b>
+&nbsp;        } else {
+<b class="nc">&nbsp;            int[] count1 = new int[MAX_VALUE];</b>
+<b class="nc">&nbsp;            int[] count2 = new int[MAX_VALUE];</b>
+<b class="nc">&nbsp;            for (int i = 0; i &lt; tab1.length; i++) {</b>
+<b class="nc">&nbsp;                count1[tab1[i]]++;</b>
+<b class="nc">&nbsp;                count2[tab2[i]]++;</b>
+&nbsp;            }
+<b class="nc">&nbsp;            for (int i = 0; i &lt; count1.length; i++) {</b>
+<b class="nc">&nbsp;                if (count1[i] != count2[i]) {</b>
+<b class="nc">&nbsp;                    result = false;</b>
+<b class="nc">&nbsp;                    break;</b>
+&nbsp;                }
+&nbsp;            }
+&nbsp;        }
+<b class="nc">&nbsp;        return result;</b>
+&nbsp;    }
+&nbsp;}
+</code>
+</pre>
+</div>
+
+<script type="text/javascript">
+(function() {
+    var msie = false, msie9 = false;
+    /*@cc_on
+      msie = true;
+      @if (@_jscript_version >= 9)
+        msie9 = true;
+      @end
+    @*/
+
+    if (!msie || msie && msie9) {
+      hljs.highlightAll()
+      hljs.initLineNumbersOnLoad();
+    }
+})();
+</script>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2023-05-01 10:16</div>
+</div>
+</body>
+</html>
