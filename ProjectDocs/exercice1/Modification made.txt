@@ -1,0 +1,5 @@
+    Added missing empty line at the end of the file.
+    Moved the tva variable initialization to the declaration line.
+    Added this to the constructor to make it clear that reference is the instance variable, not the parameter.
+    Added curly braces to the getReference method to improve readability and avoid a Checkstyle warning.
+    Added an if statement to the equals method to prevent NullPointerException and satisfy Checkstyle's equals/hashCode rule.
