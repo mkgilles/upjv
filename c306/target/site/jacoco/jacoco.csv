@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+c306,upvj.sudoku,ElementDeGrilleImplAsChar,0,13,0,0,0,6,0,3,0,3
+c306,upvj.sudoku,ValeurImpossibleException,4,0,0,0,2,0,1,0,1,0
+c306,upvj.sudoku,CaractereInterditException,0,6,0,0,0,3,0,1,0,1
+c306,upvj.sudoku,GrilleParser,86,71,16,8,21,14,9,4,0,1
+c306,upvj.sudoku,HorsBornesException,0,4,0,0,0,2,0,1,0,1
+c306,upvj.sudoku,GrilleImpl,65,127,20,28,11,25,13,19,1,7
+c306,upvj.sudoku,ValeurInitialeModificationException,4,0,0,0,2,0,1,0,1,0
+c306,upvj.sudoku,ElementInterditException,0,3,0,0,0,1,0,1,0,1
