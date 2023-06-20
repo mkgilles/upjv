@@ -1,4 +1,4 @@
-package upvj.sudoku;
+package sudoku;
 
 public class ValeurInitialeModificationException extends Throwable {
     /**

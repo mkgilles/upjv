@@ -1,4 +1,4 @@
-package upvj.sudoku;
+package sudoku;
 
 /**
  * Exception levée lorsque les paramètres de positions sortent de la grille.

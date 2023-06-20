@@ -1,4 +1,4 @@
-package upvj.sudoku;
+package sudoku;
 
 /**
  * Interface de résolveur de Grille.

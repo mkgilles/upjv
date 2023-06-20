@@ -1,4 +1,4 @@
-package upvj.sudoku;
+package sudoku;
 /**
  *
  * @author Gilles MAMBIDI

@@ -1,1 +1,1 @@
-package upvj.sudoku;
+package org.example.sudoku;

@@ -1,4 +1,4 @@
-package upvj.sudoku;
+package sudoku;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -78,11 +78,11 @@ public class GrilleImpl implements Grille {
             ElementInterditException, ValeurInitialeModificationException,
             CaractereInterditException {
         if (x < 0 || x >= dimension || y < 0 || y >= dimension) {
-            throw new HorsBornesException("");
+            throw new HorsBornesException("Coordinates are out of bounds");
         }
 
         if (!isPossible(x, y, value)) {
-            throw new ValeurImpossibleException("");
+            throw new ValeurImpossibleException("Valeur impossible");
         }
 
         if (value != null && !getElements().contains(value)) {

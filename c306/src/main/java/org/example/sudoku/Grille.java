@@ -1,4 +1,4 @@
-package upvj.sudoku;
+package sudoku;
 
 import java.util.Set;
 
